@@ -1,0 +1,65 @@
+/****************************************
+* Transform
+****************************************/
+.transform-demo > div {
+  height: 40px;
+  background: salmon;
+  width: 20%;
+  margin: auto;
+  display: inline-block;
+
+}
+
+.transform-demo > div:hover{
+  animation-name: hide-me;
+  animation-duration: 1s;
+  transform: translate(100%, 50%);
+}
+
+/****************************************
+* Transition
+****************************************/
+
+.transition-demo img {
+  margin-bottom: .5em;
+  width: 200px;
+  height: 200px;
+  filter: grayscale(100%);
+  transition: .5s; 
+transform: scale(1.25) rotate(180deg);
+}
+
+.transition-demo img:hover {
+  filter:none;
+  transform: scale(1.25) rotate(180deg);
+}
+
+/****************************************
+* Animation
+****************************************/
+
+.bar {
+    border: 1px solid black;
+    height: 50px;
+    width: 500px;
+    margin: auto;
+    background-color: palegreen;
+    animation-name: sale-bar;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+animation-iteration-count: 10;
+}
+
+@keyframes sale-bar {
+  0% { background-color: lightgreen; width: 450px }
+  25% { background-color: gold; width: 375px }
+  50% { background-color: salmon; width: 250px }
+  75% { background-color: #FF033E; width: 125x; border-radius: 0; transform: scale(1) }
+  100% { background-color: crimson; width: 10px; border-radius: 100%; transform: scale(0) }
+}                  
+@keyframes hide-me {
+  0% {background-color: green; transform:translae(100 px, 0px)}
+  75%{background-color: yellow; center:0 px}
+  100% {background-color: pink; transform: translate(150 px, 0px)}
+}
